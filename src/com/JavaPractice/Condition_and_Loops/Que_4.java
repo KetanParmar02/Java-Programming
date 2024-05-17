@@ -1,5 +1,7 @@
 package com.JavaPractice.Condition_and_Loops;
 
+import java.util.Scanner;
+
 public class Que_4 {
     public static void main(String[] args) {
 
@@ -14,5 +16,23 @@ public class Que_4 {
 //        }
 //
 //        System.out.println("Count = " + count);
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Number = ");
+        int num = input.nextInt();
+
+        System.out.print("Enter Digit = ");
+        int digit = input.nextInt();
+
+        int count = 0;
+
+        while (num > 0) {
+            int remainder = (num % 10);
+            if (remainder == digit){
+                count++;
+            }
+            num = num / 10;
+        }
+        System.out.println("The Given digit is " + count + " time present in the Number");
     }
 }
