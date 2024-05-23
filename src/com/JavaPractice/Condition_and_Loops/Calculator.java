@@ -13,24 +13,26 @@ public class Calculator {
             if (ch == 'X' || ch == 'x') {
                 break;
             }
-            System.out.print("Enter First Number = ");
-            int num1 = input.nextInt();
-            System.out.print("Enter Second Number = ");
-            int num2 = input.nextInt();
-            if (ch == '+')
-                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
-            else if (ch == '-')
-                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
-            else if (ch == '*')
-                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
-            else if (ch == '/')
-                System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
-            else if (ch == '%')
-                System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
-            else if (ch == '^')
-                System.out.println(num1 + " ^ " + num2 + " = " + (int) Math.pow(num1, num2));
-            else
-                break;
+            if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^' || ch == '%') {
+                System.out.print("Enter First Number = ");
+                int num1 = input.nextInt();
+                System.out.print("Enter Second Number = ");
+                int num2 = input.nextInt();
+                if (ch == '+')
+                    System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                else if (ch == '-')
+                    System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+                else if (ch == '*')
+                    System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+                else if (ch == '/')
+                    System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+                else if (ch == '%') {
+                    if (num2 != 0)
+                        System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
+                }
+                else System.out.println(num1 + " ^ " + num2 + " = " + (int) Math.pow(num1, num2));
+            }
+
         }
     }
 }
