@@ -71,7 +71,7 @@ public class SwitchCase {
             default -> System.out.println("Invalid Day");
         }
 
-        //write Binary tree program
+        // write a example of binary tree question
 
     }
 }
