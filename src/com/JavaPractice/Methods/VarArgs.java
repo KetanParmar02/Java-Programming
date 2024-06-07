@@ -8,6 +8,7 @@ public class VarArgs {
         sum();
         multipleParameters(5, "Hello", "World", "Java");
         multipleParameters("Hello", "World", "Java");
+
     }
 
     static void sum(int... arr) {
